@@ -13,7 +13,7 @@ WHITE_COLOR="\e[97m"
 RESET_COLOR="\e[0m"
 
 #clear screen
-#clear
+clear
 
 #logo
 echo -e "${RED_COLOR}
@@ -30,7 +30,7 @@ echo -e "Installing TFT Display 3.5 Drivers"
 read -p "[select] Option > SPI . enable [press enter to continue, ctrl +x to quit]" 
 
 #raspi config
-#sudo raspi-config
+sudo raspi-config
 
 #update and upgrade
 echo -e "Updating System"
