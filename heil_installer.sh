@@ -56,12 +56,12 @@ echo -e "LCD Set [changes will be visible after Reboot]"
 
 #enable display for console
 echo -e "Enable display for console"
-echo "fbcon=map:10 fbcon=font:VGA8x8 fbcon=rotate:1" >> /boot/firmware/cmdline.txt
-echo "display_rotate=1" >> /boot/firmware/config.txt
+sudo echo "fbcon=map:10 fbcon=font:VGA8x8 fbcon=rotate:1" >> /boot/firmware/cmdline.txt
+sudo echo "display_rotate=1" >> /boot/firmware/config.txt
 
 #portrait display
 echo -e " Making display portrait"
-echo "display_rotate=1" >> /boot/firmware/config.txt
+sudo echo "display_rotate=1" >> /boot/firmware/config.txt
 
 #fix keyboard mismapping issue
 echo -e "Fixing keyboard mismapping"
@@ -69,7 +69,7 @@ sudo cp keyboard /etc/default/keyboard
 
 #setting up the gpio keys
 echo -e "Setting GPIO Keys"
-echo -e '
+sudo echo -e '
 
 dtoverlay=gpio-key,gpio=26,keycode=103,label="UP"
 dtoverlay=gpio-key,gpio=21,keycode=108,label="DOWN"
